@@ -83,6 +83,11 @@ private Asignacion_alumnos nuevaVentana9;
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Carreras");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         Cursos.setText("Cursos");
@@ -94,6 +99,11 @@ private Asignacion_alumnos nuevaVentana9;
         jMenu1.add(Cursos);
 
         jMenuItem4.setText("Jornadas");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem4);
 
         jMenuItem5.setText("Aulas");
@@ -186,6 +196,28 @@ private Asignacion_alumnos nuevaVentana9;
         nuevaVentana4.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
         nuevaVentana4.show();
     }//GEN-LAST:event_CursosActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+           nuevaVentana3=new Carreras();
+        jDesktopPane1.add (nuevaVentana3);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana3.getSize();
+        nuevaVentana3.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana3.show();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+           nuevaVentana5=new Jornadas();
+        jDesktopPane1.add (nuevaVentana5);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana5.getSize();
+        nuevaVentana5.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana5.show();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
