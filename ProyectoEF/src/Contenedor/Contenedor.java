@@ -33,10 +33,46 @@ private Asignacion_maestros nuevaVentana11;
     public Contenedor() {
         initComponents();
     }
-
+    
+    
     Contenedor(Usuarios mod) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        initComponents();
+        setLocationRelativeTo(null);
+        this.mod = mod;
+       // JFrame.setDefaultLookAndFeelDecorated(true);
+      //  SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.MagmaSkin");
+                Contenedor ve= new Contenedor ();
+                ve.setVisible(true);
+
+        if (mod.getIdTipo() == 1) {
+            jMenu1.setVisible(true);
+           //   Menueditar.setVisible(true);
+             // MenuSalir.setVisible(true);
+       
+        //}
+         } else {
+            jMenu1.setVisible(true);
+           jMenu1.setVisible(true);
+            
+        }
+        if (mod.getIdTipo() == 2) {
+            jMenu1.setVisible(true);
+            jMenu1.setVisible(true);
+        //} else {
+          //  menuProveedores.setVisible(false);
+           //menuProductos.setVisible(false);
+        }
+            if (mod.getIdTipo() == 3) {
+            jMenu1.setVisible(true);
+            jMenu1.setVisible(false);
+        //} else {
+          //  menuProveedores.setVisible(false);
+           //menuProductos.setVisible(false);
+            }
+    
     }
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,7 +108,7 @@ private Asignacion_maestros nuevaVentana11;
         jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes2/Fonto2.jpg"))); // NOI18N
-        jDesktopPane1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
+        jDesktopPane1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 530));
 
         jMenu1.setText("Catalogos");
 
@@ -175,7 +211,12 @@ private Asignacion_maestros nuevaVentana11;
 
         jMenu4.setText("Opciones");
 
-        jMenuItem12.setText("jMenuItem12");
+        jMenuItem12.setText("Salir");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem12);
 
         jMenuBar1.add(jMenu4);
@@ -186,11 +227,11 @@ private Asignacion_maestros nuevaVentana11;
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 961, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
         );
 
         pack();
@@ -318,6 +359,11 @@ private Asignacion_maestros nuevaVentana11;
         nuevaVentana11.show();
 
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     /**
      * @param args the command line arguments

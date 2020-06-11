@@ -277,6 +277,10 @@ String BD = "jdbc:mysql://localhost/siu";
         Txt_Buscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
         setVisible(true);
 
         añadir.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N

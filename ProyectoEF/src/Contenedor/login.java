@@ -105,7 +105,7 @@ public class login extends javax.swing.JFrame {
                 this.dispose();
 
                 Contenedor frmMenu = new Contenedor(mod);
-                frmMenu.setVisible(true);
+                frmMenu.setVisible(false);
 
             } else {
                 JOptionPane.showMessageDialog(null, "Datos incorrectos");

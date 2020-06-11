@@ -117,6 +117,10 @@ public class Carreras extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_carrera = new javax.swing.JTable();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
         setVisible(true);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/storage_database_databases_data_icon_141907.png"))); // NOI18N
