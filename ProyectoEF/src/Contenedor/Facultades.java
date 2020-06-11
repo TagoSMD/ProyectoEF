@@ -181,7 +181,7 @@ public class Facultades extends javax.swing.JInternalFrame {
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Puesto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 18), new java.awt.Color(0, 0, 153))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Facultades", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 18), new java.awt.Color(0, 0, 153))); // NOI18N
 
         txt_estatus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_estatus.addActionListener(new java.awt.event.ActionListener() {
@@ -368,14 +368,14 @@ public class Facultades extends javax.swing.JInternalFrame {
         //Codigo que permite consultar registros en la base de datos
           try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "kingcobra123DA");
-            PreparedStatement pst = cn.prepareStatement("select * from facultades where ID = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from facultades where codigo_facultad  = ?");
             pst.setString(1, Txt_Buscar.getText().trim());
 
             ResultSet rs = pst.executeQuery();
                     if(rs.next()){
-                txt_codigo.setText(rs.getString("codigo_empleado"));
-                txt_nombre.setText(rs.getString("nombre_empleado"));
-                txt_estatus.setText(rs.getString("apellido_empleado"));
+                txt_codigo.setText(rs.getString("codigo_facultad"));
+                txt_nombre.setText(rs.getString("nombre_facultad"));
+                txt_estatus.setText(rs.getString("estatus_facultad"));
                
             } else {
                 JOptionPane.showMessageDialog(null, "Empleado no registrado.");

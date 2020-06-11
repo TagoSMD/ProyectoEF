@@ -8,6 +8,7 @@ package Contenedor;
 
 import Clases.Usuarios;
 import java.awt.Dimension;
+import javax.swing.UIManager;
 
 /**
  *
@@ -50,7 +51,7 @@ private Asignacion_alumnos nuevaVentana9;
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        Cursos = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -84,8 +85,13 @@ private Asignacion_alumnos nuevaVentana9;
         jMenuItem2.setText("Carreras");
         jMenu1.add(jMenuItem2);
 
-        jMenuItem3.setText("Cursos");
-        jMenu1.add(jMenuItem3);
+        Cursos.setText("Cursos");
+        Cursos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CursosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Cursos);
 
         jMenuItem4.setText("Jornadas");
         jMenu1.add(jMenuItem4);
@@ -163,6 +169,17 @@ private Asignacion_alumnos nuevaVentana9;
         nuevaVentana1.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void CursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CursosActionPerformed
+        // TODO add your handling code here:
+        nuevaVentana4=new Cursos();
+        jDesktopPane1.add (nuevaVentana4);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana4.getSize();
+        nuevaVentana4.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana4.show();
+    }//GEN-LAST:event_CursosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -173,12 +190,8 @@ private Asignacion_alumnos nuevaVentana9;
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+          UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+        
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Contenedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -199,6 +212,7 @@ private Asignacion_alumnos nuevaVentana9;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Cursos;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
@@ -211,7 +225,6 @@ private Asignacion_alumnos nuevaVentana9;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
