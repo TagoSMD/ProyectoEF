@@ -368,7 +368,7 @@ public void Tabla() {
                 txt_estatus.setText(rs.getString("estatus_sede"));
                
             } else {
-                JOptionPane.showMessageDialog(null, "Empleado no registrado.");
+                JOptionPane.showMessageDialog(null, "Sede no registrado.");
             }
 
         }catch (Exception e){
