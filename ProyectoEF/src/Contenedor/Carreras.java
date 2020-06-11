@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Santiago Martinez Diaz (tago)
  */
 public class Carreras extends javax.swing.JInternalFrame {
- String BD = "jdbc:mysql://localhost/Final";
+ String BD = "jdbc:mysql://localhost/siu";
    String Usuario = "root";
    String Clave = "kingcobra123DA";
     /**

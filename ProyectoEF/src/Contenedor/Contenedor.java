@@ -26,6 +26,7 @@ private Secciones nuevaVentana7;
 private Sedes nuevaVentana8;
 private Alumnos nuevaVentana9;
 private Asignacion_alumnos nuevaVentana10;
+private Asignacion_maestros nuevaVentana11;
     /**
      * Creates new form Contenedor
      */
@@ -151,10 +152,20 @@ private Asignacion_alumnos nuevaVentana10;
 
         jMenu2.setText("Procesos");
 
-        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.setText("Asignacion Alumnos");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem10);
 
-        jMenuItem11.setText("jMenuItem11");
+        jMenuItem11.setText("Asignacion Maestros");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem11);
 
         jMenuBar1.add(jMenu2);
@@ -283,6 +294,30 @@ private Asignacion_alumnos nuevaVentana10;
         nuevaVentana6.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
         nuevaVentana6.show();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        nuevaVentana10=new Asignacion_alumnos();
+        jDesktopPane1.add (nuevaVentana10);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana10.getSize();
+        nuevaVentana10.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana10.show();
+
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+          nuevaVentana11=new Asignacion_maestros();
+        jDesktopPane1.add (nuevaVentana11);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana11.getSize();
+        nuevaVentana11.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana11.show();
+
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     /**
      * @param args the command line arguments
