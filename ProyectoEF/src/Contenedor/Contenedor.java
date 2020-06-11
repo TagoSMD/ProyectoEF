@@ -156,6 +156,13 @@ private Asignacion_alumnos nuevaVentana9;
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
+          nuevaVentana2=new Aulas();
+        jDesktopPane1.add (nuevaVentana2);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana2.getSize();
+        nuevaVentana2.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana2.show();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
