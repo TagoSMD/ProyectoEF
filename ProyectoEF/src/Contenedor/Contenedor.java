@@ -151,10 +151,15 @@ private Asignacion_alumnos nuevaVentana10;
 
         jMenu2.setText("Procesos");
 
-        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.setText("Asignacion Alumnos");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem10);
 
-        jMenuItem11.setText("jMenuItem11");
+        jMenuItem11.setText("Asignacion Maestros");
         jMenu2.add(jMenuItem11);
 
         jMenuBar1.add(jMenu2);
@@ -164,7 +169,7 @@ private Asignacion_alumnos nuevaVentana10;
 
         jMenu4.setText("Opciones");
 
-        jMenuItem12.setText("jMenuItem12");
+        jMenuItem12.setText("Salir");
         jMenu4.add(jMenuItem12);
 
         jMenuBar1.add(jMenu4);
@@ -283,6 +288,17 @@ private Asignacion_alumnos nuevaVentana10;
         nuevaVentana6.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
         nuevaVentana6.show();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+     nuevaVentana10=new Asignacion_alumnos();
+        jDesktopPane1.add (nuevaVentana6);
+        
+          Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana10.getSize();
+        nuevaVentana10.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana10.show();
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
